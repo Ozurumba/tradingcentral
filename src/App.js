@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
-
+import styled, {keyframes} from 'styled-components';
+import { bounce } from 'react-animations';
 
 // react component class
 export default class App extends React.Component {
@@ -19,6 +20,7 @@ export default class App extends React.Component {
         };
     }
 
+    
     // componentDidMount
     componentDidMount() {
         this.fetchData();
@@ -69,14 +71,18 @@ export default class App extends React.Component {
             });
     };
 
+    
 
 // render
     render() {
+        const Bounce = styled.div`animation: 2s ${keyframes` ${bounce}`} infinite`;
+
         return (
             <main>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
+                            <Bounce><h1 className="traders">$Traders Central</h1></Bounce>
                         
                             <h1 className="text-center">Currency Converter</h1>
                         </div>
