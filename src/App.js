@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 
+
 // react component class
 export default class App extends React.Component {
     // constructor for currencies
@@ -76,6 +77,7 @@ export default class App extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
+                        
                             <h1 className="text-center">Currency Converter</h1>
                         </div>
                     </div>
@@ -143,7 +145,7 @@ export default class App extends React.Component {
                                     </div>
 
                                     <div className="text-center my-3">
-                                        <button className="btn btn-dark" onClick={this.convert}>Convert</button>
+                                        <button className="btn btn-primary" onClick={this.convert}>Convert</button>
                                     </div>
 
                                     <div className="text-center">
